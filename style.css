@@ -1,0 +1,86 @@
+.toast {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.3s ease-out;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.drink-card {
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.drink-card:hover {
+    transform: translateY(-5px);
+}
+
+.drink-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.drink-card .card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.drink-card .category-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#groupList {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.modal-body img {
+    max-height: 300px;
+    object-fit: cover;
+}
+
+#modalDetails dl {
+    margin-bottom: 0;
+}
+
+#modalDetails dt {
+    font-weight: 600;
+    color: #0d6efd;
+}
+.loading {
+    text-align: center;
+    padding: 2rem;
+}
+
+.loading i {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#notFound {
+    color: #6c757d;
+}
+
+@media (max-width: 768px) {
+    .modal-body img {
+        max-height: 200px;
+    }
+    
+    #groupList {
+        max-height: 300px;
+    }
+}

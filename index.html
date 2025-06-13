@@ -36,6 +36,86 @@
       </div>
     </header>
 
+    <main class="container">
+      <div class="row mb-5">
+        <div class="col-md-8">
+          <div id="drinksContainer" class="row g-4"></div>
+
+          <div id="notFound" class="text-center py-5 d-none">
+            <i class="fas fa-cocktail fa-3x text-muted mb-3"></i>
+            <h3>No drinks found</h3>
+            <p>Try searching for something else</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-header bg-primary text-white">
+              <h4 class="mb-0">My Drink Group</h4>
+            </div>
+            <div class="card-body">
+              <div
+                class="d-flex justify-content-between align-items-center mb-3"
+              >
+                <h5 class="mb-0">Selected Drinks</h5>
+                <span id="drinkCount" class="badge bg-primary">0/7</span>
+              </div>
+              <ul id="groupList" class="list-group"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="modal fade" id="drinkModal" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Drink Details</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-5">
+                <img
+                  id="modalImage"
+                  src=""
+                  alt="Drink"
+                  class="img-fluid rounded"
+                />
+              </div>
+              <div class="col-md-7">
+                <h3 id="modalTitle"></h3>
+                <div id="modalDetails"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div
+        id="toast"
+        class="toast align-items-center border-0"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="d-flex">
+          <div class="toast-body"></div>
+          <button
+            type="button"
+            class="btn-close me-2 m-auto"
+            data-bs-dismiss="toast"
+          ></button>
+        </div>
+      </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
   </body>
