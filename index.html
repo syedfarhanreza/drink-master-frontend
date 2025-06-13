@@ -15,7 +15,26 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1 class="text-center p-3 border">Hello Drink Master</h1>
+    <header class="bg-primary text-white py-4 mb-4">
+      <div class="container">
+        <h1 class="text-center">Drink Master</h1>
+        <div class="row justify-content-center mt-3">
+          <div class="col-md-6">
+            <div class="input-group">
+              <input
+                type="text"
+                id="searchInput"
+                class="form-control"
+                placeholder="Search for a drink..."
+              />
+              <button class="btn btn-light" type="button" id="searchBtn">
+                <i class="fas fa-search"></i> Search
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
